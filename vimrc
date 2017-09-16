@@ -19,7 +19,8 @@ Plug 'bling/vim-airline'
 Plug 'kien/rainbow_parentheses.vim'
 
 " ColorScheme
-Plug 'larssmit/vim-getafe'
+" Plug 'larssmit/vim-getafe'
+Plug 'altercation/vim-colors-solarized'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'altercation/vim-colors-solarized'
 Plug 'jonathanfilip/vim-lucius'
@@ -140,7 +141,8 @@ syntax on
 set synmaxcol=300
 let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 set background=dark
-colorscheme getafe
+" colorscheme getafe
+colorscheme solarized
 " colorscheme PaperColor
 " colorscheme lucius
 
