@@ -273,7 +273,7 @@ imap <silent> <F4> <ESC>:set invpaste<CR>:set paste?<CR>
 nmap <silent> <leader><space> :%s/\s\+$//<CR>
 
 " Cursor control
-nmap <silent> <leader>a A
+nmap <silent> <leader>ap A
 nmap <silent> <leader>aa ^
 nmap <silent> <leader>ee $
 nmap <silent> <leader>ge G
@@ -281,6 +281,7 @@ nmap <silent> <leader>ge G
 " Process control
 nmap <silent> <leader>zz <C-z>
 nmap <silent> <leader>qq :q<CR>
+nmap <silent> <leader>qa :qa<CR>
 
 " show invisible chars
 nmap <silent> <leader>l :set list!<CR>
@@ -294,7 +295,9 @@ nmap <silent> <leader>nn #
 
 " Save file
 nmap <silent> <leader>we :w<CR>
+nmap <silent> <leader>wea :wa<CR>
 nmap <silent> <leader>wq :wq<CR>
+nmap <silent> <leader>wqa :wqa<CR>
 
 " Some helpers to edit mode
 nmap <leader>ew :e    %:p:h/<CR>
