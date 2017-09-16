@@ -13,7 +13,7 @@ call plug#begin('~/.vim/plugged')
 
 " Style
 " CSApprox:
-"   => Make gvim-only colorschemes work transparently in terminal vim 
+"   => Make gvim-only colorschemes work transparently in terminal vim
 Plug 'godlygeek/csapprox'
 Plug 'bling/vim-airline'
 Plug 'kien/rainbow_parentheses.vim'
@@ -234,11 +234,17 @@ if !exists("my_auto_commands_loaded")
   augroup END
 endif
 
+" Set number as startup
+set number
+set relativenumber
+
+" Set this map so that <C-c> will work in insert mode after v-block
+imap <silent> <C-c> <ESC>
 
 " Key maps
 " -----------------------------------------------------------------------------
 " Leader
-let mapleader = ','
+let mapleader = ' '
 
 " Switch ; :
 " nnoremap : ;
@@ -266,23 +272,38 @@ imap <silent> <F4> <ESC>:set invpaste<CR>:set paste?<CR>
 " remove all the ending white spaces
 nmap <silent> <leader><space> :%s/\s\+$//<CR>
 
+" Cursor control
+nmap <silent> <leader>a A
+nmap <silent> <leader>aa ^
+nmap <silent> <leader>ee $
+nmap <silent> <leader>ge G
+
+" Process control
+nmap <silent> <leader>zz <C-z>
+nmap <silent> <leader>qq :q<CR>
+
 " show invisible chars
 nmap <silent> <leader>l :set list!<CR>
 
 " cd to the directory containing the file in the buffer
 nmap <silent> <leader>cd :lcd %:h<CR>
 
-" Toggle line number
-nmap <silent> <leader>n :set invnumber<CR>:set number?<CR>
+" Search forward/backward
+nmap <silent> <leader>n *
+nmap <silent> <leader>nn #
 
-" Toggle line wrap
-nmap <silent> <leader>w :set invwrap<CR>:set wrap?<CR>
+" Save file
+nmap <silent> <leader>we :w<CR>
+nmap <silent> <leader>wq :wq<CR>
 
 " Some helpers to edit mode
 nmap <leader>ew :e    %:p:h/<CR>
 nmap <leader>es :sp   %:p:h/<CR>
 nmap <leader>ev :vs   %:p:h/<CR>
 nmap <leader>et :tabe %:p:h/<CR>
+nmap <leader>ex :Ex<CR>
+nmap <leader>sex :Sex<CR>
+nmap <leader>vex :Vex<CR>
 
 " HEX view
 nmap <leader>16  :% !xxd<CR>
@@ -374,8 +395,8 @@ nmap <F5> :GundoToggle<CR>
 imap <F5> <ESC>:GundoToggle<CR>
 
 " ZoomWin
-map <leader>zw :ZoomWin<CR>
-map <leader>zz :ZoomWin<CR>
+" map <leader>zw :ZoomWin<CR>
+" map <leader>zz :ZoomWin<CR>
 
 " Config the NERDTree
 let g:ctrlp_match_window = 'order:ttb,max:20'
