@@ -7,7 +7,7 @@ I am using [Vundle](https://github.com/gmarik/Vundle.vim) as my vim plugin manag
 ### Automatic installer
 
 ```bash
-$ curl -Lo- https://raw.github.com/agate/vimfiles/master/bootstrap.sh | bash
+$ curl -Lo- https://raw.github.com/fanchen1988/vimfiles/master/bootstrap.sh | bash
 ```
 
 ### Manually
@@ -15,7 +15,7 @@ $ curl -Lo- https://raw.github.com/agate/vimfiles/master/bootstrap.sh | bash
 > please remember remove your current ~/.vim and ~/.vimrc file
 
 ```bash
-$ git clone git://github.com/agate/vimfiles.git ~/.vim
+$ git clone git://github.com/fanchen1988/vimfiles.git ~/.vim
 $ ln -s ~/.vim/vimrc ~/.vimrc
 $ cd ~/.vim
 $ git submodule init
