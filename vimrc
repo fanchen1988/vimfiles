@@ -73,7 +73,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'majutsushi/tagbar'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'sjl/gundo.vim'
-Plug 'ZoomWin'
+" Plug 'ZoomWin'
 Plug 'rizzatti/dash.vim'
 
 " Add plugins to &runtimepath
