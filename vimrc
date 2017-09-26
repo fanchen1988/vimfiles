@@ -43,6 +43,7 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'moll/vim-node'
 Plug 'mxw/vim-jsx'
 Plug 'hashivim/vim-terraform'
+Plug 'jiangmiao/auto-pairs'
 
 " Lang Tools
 Plug 'ngmy/vim-rubocop' " RuboCop is a Ruby static code analyzer, beautiful / clean ruby code!
