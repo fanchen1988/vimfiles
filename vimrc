@@ -239,6 +239,12 @@ endif
 set number
 set relativenumber
 
+" Toggle rainbow
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
 " Set this map so that <C-c> will work in insert mode after v-block
 imap <silent> <C-c> <ESC>
 
