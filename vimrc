@@ -275,9 +275,13 @@ nmap <silent> <leader><space> :%s/\s\+$//<CR>
 
 " Cursor control
 nmap <silent> <leader>ap A
+vmap <silent> <leader>ap A
 nmap <silent> <leader>aa ^
+vmap <silent> <leader>aa ^
 nmap <silent> <leader>ee $
+vmap <silent> <leader>ee $
 nmap <silent> <leader>ge G
+vmap <silent> <leader>ge G
 
 " Process control
 nmap <silent> <leader>zz <C-z>
