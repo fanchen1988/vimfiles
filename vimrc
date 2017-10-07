@@ -305,7 +305,7 @@ nmap <silent> <leader>cd :lcd %:h<CR>
 
 " Search forward/backward
 nmap <silent> <leader>n *
-nmap <silent> <leader>nn #
+nmap <silent> <leader>N #
 
 " Save file
 nmap <silent> <leader>we :w<CR>
