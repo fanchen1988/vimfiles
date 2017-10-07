@@ -289,6 +289,8 @@ nmap <silent> <leader>ee $
 vmap <silent> <leader>ee $
 nmap <silent> <leader>ge G
 vmap <silent> <leader>ge G
+nmap <silent> <leader>pa %
+vmap <silent> <leader>pa %
 
 " Process control
 nmap <silent> <leader>zz <C-z>
