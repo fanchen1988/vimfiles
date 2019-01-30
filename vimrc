@@ -1,6 +1,9 @@
 " Make sure VIM using a POSIX-Compliant shell
 set shell=/bin/sh
 
+" For Wish Ubuntu specifically
+"set t_Co=256
+
 " For Neovim
 let g:python_host_prog = expand('$HOME') . '/.pyenv/versions/neovim2/bin/python'
 let g:python3_host_prog = expand('$HOME') . '/.pyenv/versions/neovim3/bin/python'
