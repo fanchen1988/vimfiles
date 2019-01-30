@@ -375,7 +375,7 @@ if executable('ag')
 endif
 "let Grep_Default_Options = '-i -r --exclude=all-wcprops --exclude=entries --exclude=\*.swp --exclude=\*.tmp --exclude=\*.log'
 "nmap <F3> :Grep<SPACE>
-nmap <leader>q :Ack
+nmap <leader>ag :Ack
 
 " Align
 " Start interactive EasyAlign in visual mode (e.g. vipga)
@@ -470,13 +470,13 @@ nmap <leader>lt :w<CR>:silent !xelatex -synctex=1 --interaction=nonstopmode %:p 
 
 " Clipboard
 " Copy to clipboard
-nmap <leader>y "+y
+"nmap <leader>y "+y
 nmap <leader>Y "+yg_
 vmap <leader>y "+y
 " Paste from clipboard
-nmap <leader>p "+p
+nmap <leader>pp "+p
 nmap <leader>P "+P
-vmap <leader>p "+p
+vmap <leader>pp "+p
 vmap <leader>P "+P
 
 
