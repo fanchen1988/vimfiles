@@ -278,8 +278,9 @@ nmap <silent> <C-N> :tabnext<CR>
 nmap <silent> <C-P> :tabprevious<CR>
 
 " Toggle paste mode
-nmap <silent> <F4> :set invpaste<CR>:set paste?<CR>
-imap <silent> <F4> <ESC>:set invpaste<CR>:set paste?<CR>
+"nmap <silent> <F4> :set invpaste<CR>:set paste?<CR>
+"imap <silent> <F4> <ESC>:set invpaste<CR>:set paste?<CR>
+nmap <silent> <leader>pt :set invpaste<CR>
 
 " remove all the ending white spaces
 nmap <silent> <leader><space> :%s/\s\+$//<CR>
