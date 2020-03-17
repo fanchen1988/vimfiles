@@ -23,9 +23,9 @@ Plug 'kien/rainbow_parentheses.vim'
 
 " ColorScheme
 " Plug 'larssmit/vim-getafe'
-Plug 'altercation/vim-colors-solarized'
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'altercation/vim-colors-solarized'
+"Plug 'altercation/vim-colors-solarized'
+Plug 'dracula/vim',{'name':'dracula'}
 Plug 'jonathanfilip/vim-lucius'
 Plug 'tomasr/molokai'
 
@@ -148,9 +148,10 @@ set synmaxcol=300
 let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 set background=dark
 " colorscheme getafe
-colorscheme solarized
+" colorscheme solarized
 " colorscheme PaperColor
 " colorscheme lucius
+colorscheme dracula
 
 set cursorline
 hi CursorLine cterm=NONE ctermbg=black ctermfg=white guibg=black guifg=white
