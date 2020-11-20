@@ -82,7 +82,9 @@ Plug 'sjl/gundo.vim'
 " Plug 'ZoomWin'
 Plug 'rizzatti/dash.vim'
 
+" See https://github.com/junegunn/fzf.vim#using-vim-plug
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " Add plugins to &runtimepath
 call plug#end()
