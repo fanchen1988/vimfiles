@@ -21,6 +21,8 @@ Plug 'godlygeek/csapprox'
 Plug 'bling/vim-airline'
 Plug 'kien/rainbow_parentheses.vim'
 
+Plug 'editorconfig/editorconfig-vim'
+
 " ColorScheme
 " Plug 'larssmit/vim-getafe'
 Plug 'NLKNguyen/papercolor-theme'
