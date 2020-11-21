@@ -51,7 +51,7 @@ Plug 'mxw/vim-jsx'
 Plug 'hashivim/vim-terraform'
 Plug 'jiangmiao/auto-pairs'
 Plug 'google/vim-jsonnet'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
 " Lang Tools
 Plug 'ngmy/vim-rubocop' " RuboCop is a Ruby static code analyzer, beautiful / clean ruby code!
