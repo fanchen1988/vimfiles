@@ -118,6 +118,9 @@ filetype plugin indent on
 " Auto read when a file is changed from the outside
 set autoread
 
+" Auto save when the :call is called, such as :GoBuild
+set autowrite
+
 " Encoding
 set encoding=utf-8
 set fileencoding=utf-8
