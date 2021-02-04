@@ -400,7 +400,7 @@ if executable('ag')
 endif
 "let Grep_Default_Options = '-i -r --exclude=all-wcprops --exclude=entries --exclude=\*.swp --exclude=\*.tmp --exclude=\*.log'
 "nmap <F3> :Grep<SPACE>
-nmap <leader>ag :Ack
+nmap <leader>ag :Ack<CR>
 
 " Align
 " Start interactive EasyAlign in visual mode (e.g. vipga)
