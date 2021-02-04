@@ -376,6 +376,15 @@ augroup filetypedetect
   autocmd! BufNewFile,BufRead *.map       set      noexpandtab
 augroup END
 
+
+" XML folding
+" -----------------------------------------------------------------------------
+augroup XML
+    autocmd!
+    autocmd FileType xml setlocal foldmethod=indent foldlevelstart=999 foldminlines=0
+augroup END
+
+
 " Fix html indent
 let g:html_indent_inctags = "html,body,head,tbody"
 
