@@ -510,6 +510,51 @@ nnoremap <leader>yd :<C-u>Ydc<CR>
 vnoremap <leader>yd :<C-u>Ydv<CR>
 
 
+" vim-go
+autocmd FileType go nmap <leader>goe :GoErrCheck<CR>
+autocmd FileType go nnoremap <leader>gec :cclose<CR>
+autocmd FileType go map <C-n> :cnext<CR>
+autocmd FileType go map <C-m> :cprevious<CR>
+
+autocmd FileType go nmap <leader>gob  <Plug>(go-build)
+autocmd FileType go nmap <leader>gor  <Plug>(go-run)
+autocmd FileType go nmap <leader>gog  <Plug>(go-generate)
+
+autocmd FileType go nmap <leader>got  <Plug>(go-test)
+autocmd FileType go nmap <leader>gotf  <Plug>(go-test-func)
+autocmd FileType go nmap <leader>gotc  <Plug>(go-test-compile)
+autocmd FileType go nmap <leader>goct  <Plug>(go-coverage-toggle)
+
+autocmd FileType go nmap <leader>goin  <Plug>(go-info)
+autocmd FileType go nmap <leader>goim  <Plug>(go-imports)
+
+autocmd FileType go nmap <leader>gol  <Plug>(go-lint)
+autocmd FileType go nmap <leader>gov  <Plug>(go-vet)
+
+autocmd FileType go nmap <leader>god  <Plug>(go-doc)
+autocmd FileType go nmap <leader>gods  <Plug>(go-doc-split)
+autocmd FileType go nmap <leader>godv  <Plug>(go-doc-vertical)
+autocmd FileType go nmap <leader>godt  <Plug>(go-doc-tab)
+autocmd FileType go nmap <leader>godb  <Plug>(go-doc-browser)
+
+autocmd FileType go nmap <leader>godf  <Plug>(go-def)
+autocmd FileType go nmap <leader>godfs  <Plug>(go-def-split)
+autocmd FileType go nmap <leader>godfv  <Plug>(go-def-vertical)
+autocmd FileType go nmap <leader>godftb  <Plug>(go-def-tab)
+
+autocmd FileType go nmap <leader>godftp  <Plug>(go-def-type)
+autocmd FileType go nmap <leader>godftpv  <Plug>(go-def-type-vertical)
+autocmd FileType go nmap <leader>godftps  <Plug>(go-def-type-split)
+autocmd FileType go nmap <leader>godftptb  <Plug>(go-def-type-tab)
+
+autocmd FileType go nmap <leader>gore  <Plug>(go-rename)
+
+autocmd FileType go nmap <leader>goclee  <Plug>(go-callees)
+autocmd FileType go nmap <leader>gocler  <Plug>(go-callers)
+autocmd FileType go nmap <leader>gocs  <Plug>(go-callstack)
+autocmd FileType go nmap <leader>goml  <Plug>(go-metalinter)
+
+
 " NEOVIM Special
 map <A-t><A-t> :vs term://fish<CR>
 if exists(":tnoremap")
