@@ -78,6 +78,7 @@ Plug 'vim-scripts/VisIncr'
 
 " Tools not very useful for me
 Plug 'scrooloose/syntastic' " Syntax checking hacks for vim
+"Plug 'dense-analysis/ale'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'majutsushi/tagbar'
 Plug 'Lokaltog/vim-easymotion'
@@ -422,7 +423,7 @@ nnoremap <leader>ctf :CtrlPTag<CR>
 nnoremap <leader>ctt :TagbarToggle<CR>
 
 " FuGitive
-nmap <leader>gb :Gblame<CR>
+nmap <leader>gb :Git blame<CR>
 nmap <leader>gs :Gstatus<CR>
 nmap <leader>gd :Gdiff<CR>
 nmap <leader>gl :Glog<CR>
@@ -463,6 +464,7 @@ set statusline+=%*
 " let g:syntastic_check_on_open = 1
 " let g:syntastic_check_on_wq = 0
 " let g:syntastic_ruby_checkers = ['haml_lint', 'rubocop', 'mri', 'rubylint', '']
+let g:syntastic_python_python_exec = '/usr/bin/python3'
 
 " Config the indent-guides
 hi IndentGuidesOdd  ctermbg=black
@@ -517,10 +519,10 @@ autocmd FileType go map <C-n> :cnext<CR>
 autocmd FileType go map <C-m> :cprevious<CR>
 
 autocmd FileType go nmap <leader>gob  <Plug>(go-build)
-autocmd FileType go nmap <leader>gor  <Plug>(go-run)
+autocmd FileType go nmap <leader>gorun  <Plug>(go-run)
 autocmd FileType go nmap <leader>gog  <Plug>(go-generate)
 
-autocmd FileType go nmap <leader>got  <Plug>(go-test)
+autocmd FileType go nmap <leader>gote  <Plug>(go-test)
 autocmd FileType go nmap <leader>gotf  <Plug>(go-test-func)
 autocmd FileType go nmap <leader>gotc  <Plug>(go-test-compile)
 autocmd FileType go nmap <leader>goct  <Plug>(go-coverage-toggle)
@@ -537,6 +539,8 @@ autocmd FileType go nmap <leader>godv  <Plug>(go-doc-vertical)
 autocmd FileType go nmap <leader>godt  <Plug>(go-doc-tab)
 autocmd FileType go nmap <leader>godb  <Plug>(go-doc-browser)
 
+autocmd FileType go nmap <leader>goref  <Plug>(go-referrers)
+
 autocmd FileType go nmap <leader>godf  <Plug>(go-def)
 autocmd FileType go nmap <leader>godfs  <Plug>(go-def-split)
 autocmd FileType go nmap <leader>godfv  <Plug>(go-def-vertical)
@@ -547,7 +551,7 @@ autocmd FileType go nmap <leader>godftpv  <Plug>(go-def-type-vertical)
 autocmd FileType go nmap <leader>godftps  <Plug>(go-def-type-split)
 autocmd FileType go nmap <leader>godftptb  <Plug>(go-def-type-tab)
 
-autocmd FileType go nmap <leader>gore  <Plug>(go-rename)
+autocmd FileType go nmap <leader>goren  <Plug>(go-rename)
 
 autocmd FileType go nmap <leader>goclee  <Plug>(go-callees)
 autocmd FileType go nmap <leader>gocler  <Plug>(go-callers)
@@ -572,3 +576,4 @@ nnoremap <A-l> <C-w>l
 autocmd CursorHold,CursorHoldI,FocusGained,BufEnter * checktime
 autocmd FileChangedShellPost *
   \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
+let g:ycm_path_to_python_interpreter="/usr/local/bin/python3"
