@@ -71,13 +71,15 @@ Plug 'tpope/vim-surround'
 " Plug 'Align'
 Plug 'junegunn/vim-easy-align'
 Plug 'jlanzarotta/bufexplorer'
+Plug 'psf/black', { 'branch': 'stable' }
+Plug 'fisadev/vim-isort'
 " Plug 'godlygeek/tabular'
 " Plug 'terryma/vim-multiple-cursors'
 Plug 'ianva/vim-youdao-translater'
 Plug 'vim-scripts/VisIncr'
 
 " Tools not very useful for me
-Plug 'scrooloose/syntastic' " Syntax checking hacks for vim
+" Plug 'scrooloose/syntastic' " Syntax checking hacks for vim
 "Plug 'dense-analysis/ale'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'majutsushi/tagbar'
@@ -252,6 +254,8 @@ if !exists("my_auto_commands_loaded")
     autocmd BufReadPre * let f=expand("<afile>") | if getfsize(f) > g:LargeFile | set eventignore+=FileType | setlocal noswapfile bufhidden=unload buftype=nowrite undolevels=-1 | else | set eventignore-=FileType | endif
   augroup END
 endif
+
+set nofixeol
 
 " Set number as startup
 set number
@@ -464,7 +468,7 @@ set statusline+=%*
 " let g:syntastic_check_on_open = 1
 " let g:syntastic_check_on_wq = 0
 " let g:syntastic_ruby_checkers = ['haml_lint', 'rubocop', 'mri', 'rubylint', '']
-let g:syntastic_python_python_exec = '/usr/bin/python3'
+let g:syntastic_python_python_exec = '/Users/fanchen/.pyenv/shims/python3'
 
 " Config the indent-guides
 hi IndentGuidesOdd  ctermbg=black
@@ -576,7 +580,35 @@ nnoremap <A-l> <C-w>l
 autocmd CursorHold,CursorHoldI,FocusGained,BufEnter * checktime
 autocmd FileChangedShellPost *
   \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
-let g:ycm_path_to_python_interpreter="/usr/local/bin/python3"
+" let g:ycm_path_to_python_interpreter="/Users/fanchen/.pyenv/shims/python3"
+" let g:ycm_server_python_interpreter="/Users/fanchen/.pyenv/shims/python3"
+" let g:ycm_global_ycm_extra_conf="/Users/fanchen/.vim/plugged/YouCompleteMe/.ycm_extra_conf.py"
+" let g:ycm_python_binary_path = 'python'
 
-autocmd FileType * set tabstop=2|set shiftwidth=2|set noexpandtab
+"autocmd FileType * set tabstop=2|set shiftwidth=2|set noexpandtab
 autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab
+
+
+" Black
+" nnoremap <F9> :Black<CR>
+" let g:black_fast = 0
+" let g:black_linelength = 88
+" let g:black_skip_string_normalization = 0
+" let g:black_virtualenv = '${HOME}/.vim/black' or ${HOME}/.local/share/nvim/black
+" let g:black_quiet = 0
+" let g:black_preview = 0
+
+" augroup black_on_save
+"   autocmd!
+"   autocmd BufWritePre *.py Black
+" augroup end
+
+
+" Isort
+" let g:vim_isort_map = '<C-i>'
+let g:vim_isort_config_overrides = {'include_trailing_comma': 1, 'multi_line_output': 3}
+let g:vim_isort_python_version = 'python3'
+
+" augroup isort_on_save
+"   autocmd BufWritePre *.py :!isort %
+" augroup end
